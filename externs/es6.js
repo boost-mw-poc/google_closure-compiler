@@ -811,6 +811,7 @@ Int8Array.of = function(var_args) {};
 /**
  * Options to use when decoding base64 into a Uint8Array.
  * @record
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64#options
  */
 function Uint8ArrayBase64Options() {}
 
@@ -856,6 +857,7 @@ Uint8ArraySetFromBase64Results.prototype.written;
 /**
  * Options to use when invoking Uint8Array.prototype.toBase64.
  * @record
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/toBase64#options
  */
 function Uint8ArrayToBase64Options() {}
 
@@ -912,8 +914,8 @@ Uint8Array.of = function(var_args) {};
 
 /**
  * Creates a new Uint8Array from a base64 encoded string.
- * @param {!string} string a base64 string encoded array
- * @param {Uint8ArrayBase64Options=} options an object specifying how to read the base64 string
+ * @param {string} string a base64 string encoded array
+ * @param {?Uint8ArrayBase64Options=} options an object specifying how to read the base64 string
  * @return {!Uint8Array} a newly created array with the specified bytes
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/fromBase64
  */
@@ -921,7 +923,7 @@ Uint8Array.fromBase64 = function(string, options) {};
 
 /**
  * Creates a new Uint8Array from a case-insensitive hex string with even length.
- * @param {!string} string a hex string encoded array of bytes
+ * @param {string} string a hex string encoded array of bytes
  * @return {!Uint8Array} a newly created array with the specified bytes
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/fromHex
  */
@@ -929,8 +931,8 @@ Uint8Array.fromHex = function(string) {};
 
 /**
  * Sets the contents of the Uint8Array from a base64 encoded string.
- * @param {!string} string a base64 string encoded array to write into this array
- * @param {Uint8ArrayBase64Options=} options an object specifying how to read the base64 string
+ * @param {string} string a base64 string encoded array to write into this array
+ * @param {?Uint8ArrayBase64Options=} options an object specifying how to read the base64 string
  * @return {!Uint8ArraySetFromBase64Results} results about the operation
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/setFromBase64
  */
@@ -938,15 +940,15 @@ Uint8Array.prototype.setFromBase64 = function(string, options) {};
 
 /**
  * Encodes the contents of the Uint8Array into a base64 string.
- * @param {Uint8ArrayToBase64Options=} options an object specifying how to encode the base64 string
- * @return {!string} a base64 encoded string representing the contents of this array
+ * @param {?Uint8ArrayToBase64Options=} options an object specifying how to encode the base64 string
+ * @return {string} a base64 encoded string representing the contents of this array
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/toBase64
  */
 Uint8Array.prototype.toBase64 = function(options) {};
 
 /**
  * Encodes the contents of the Uint8Array into a hex string.
- * @return {!string} a hex encoded string representing the contents of this array
+ * @return {string} a hex encoded string representing the contents of this array
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array/toHex
  */
 Uint8Array.prototype.toHex = function() {};
